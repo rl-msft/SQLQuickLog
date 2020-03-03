@@ -14,7 +14,7 @@ echo done
 
 just right click any errorlog file and you should see this menu
 
-  ![Image description](https://github.com/rl-msft/sqlquicklog/blob/master/images/menu.JPG)
+  ![Image description](https://github.com/rl-msft/SQLQuickLog/blob/master/images/menu.jpg)
 
 There is no modification happening to any file, processed file will be added as new file with the same as the original file with action name taking against it, for example below errorlog.1 was processed to remove logins entries 
 
