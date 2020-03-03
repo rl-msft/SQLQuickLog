@@ -9,6 +9,7 @@ to **install** the menu run this command
 ```shell script
 powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlquicklog/master/installation/setup.reg' -OutFile $env:temp\setup.reg"
 regedit.exe /s "%temp%\setup.reg"
+echo done
 ```
 
 just right click any errorlog file and you should see this menu
@@ -25,4 +26,5 @@ to **uninstall** run this command
 ```shell script
 powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlquicklog/master/installation/uninstall.reg' -OutFile $env:temp\uninstall.reg"
 regedit.exe /s "%temp%\uninstall.reg"
+echo done
 ```
