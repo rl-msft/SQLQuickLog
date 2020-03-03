@@ -16,7 +16,7 @@ echo done
 
 after running the above command, when you right click any log file you should see this menu
 
-  ![Image description](https://github.com/rl-msft/SQLQuickLog/blob/master/images/menu.jpg)
+  ![Image description](https://github.com/rl-msft/SQLQuickLog/blob/master/images/SQLquickLogmenu.jpg)
 
 when you select any option, there is no modification happening to any the selected file, processed file will be added as new file named as the original file with action performed against it, for example hte below errorlog.1 was processed to remove logins entries, notice the new file new created.
 
