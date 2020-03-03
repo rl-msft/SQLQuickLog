@@ -75,7 +75,7 @@ Windows Registry Editor Version 5.00
 
 ;Check for updates
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogCheckUpdates]
-@="Update Sql Errorlog Helper"
+@="Update SQL QuickLog"
 "Icon"="\"C:\\Windows\\System32\\shell32.dll\",238"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogCheckUpdates\command]
