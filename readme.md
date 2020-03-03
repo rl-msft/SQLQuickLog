@@ -1,4 +1,4 @@
-# SQL QuickLog (SQL errorlog filtering) Windows Context menu
+# SQL QuickLog Windows Context menu for filtering large SQL errorlogs
 
 this is implemented as windows explorer context menu for easy access, it will help to deal with large SQL errorlog files by allowing quick filters to remove nonactionable entries that you might see in SQL errorlog, original files are NOT modified, the menu will create new files after applying the required filters, also the new files are encoded as UTF-8 which should help to reduce file size by approximately 50%. the new files should allow you to focus on what is matter when investigating those log files.
 
