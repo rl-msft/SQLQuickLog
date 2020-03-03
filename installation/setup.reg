@@ -1,0 +1,82 @@
+Windows Registry Editor Version 5.00
+
+;main menu
+[HKEY_CLASSES_ROOT\*\shell\SQLQuickLog]
+"Subcommands"="SQLQuickLogErrorlogRemoveLoginBackupAGG; SQLQuickLogErrorlogRemoveBackup; SQLQuickLogErrorlogRemoveLogin; SQLQuickLogErrorlogRemoveAGG; SQLQuickLogRemoveBasedClipboard; SQLQuickLogFilterBasedClipboard; SQLQuickLogSplitFile; SQLQuickLogChangeEncoding; SQLQuickLogCheckUpdates"
+"Icon"="\"C:\\Windows\\System32\\shell32.dll\",70"
+"MUIVerb"="SQL QuickLog"
+"Version"="1.0"
+
+;Remove Login, Backup and Non Actionable AAG Entries
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogErrorlogRemoveLoginBackupAGG]
+@="Remove All Login, Successful backup and DbMgrPartnerCommitPolicy* Entries"
+"Icon"="\"C:\\Windows\\System32\\shell32.dll\",259"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogErrorlogRemoveLoginBackupAGG\command]
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlQuicklog/master/Scripts/SQLQuickLogErrorlogRemoveLoginBackupAGG.ps1').Content)) -ArgumentList ($args + @('%1')))"
+
+;Remove Backup Entries
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogErrorlogRemoveBackup]
+@="Remove Successful backup Entries"
+"Icon"="\"C:\\Windows\\System32\\shell32.dll\",78"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogErrorlogRemoveBackup\command]
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlQuicklog/master/Scripts/SQLQuickLogErrorlogRemoveBackup.ps1').Content)) -ArgumentList ($args + @('%1')))"
+
+;Remove Logins Entries
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogErrorlogRemoveLogin]
+@="Remove All Logins Entries"
+"Icon"="\"C:\\Windows\\System32\\shell32.dll\",170"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogErrorlogRemoveLogin\command]
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlQuicklog/master/Scripts/SQLQuickLogErrorlogRemoveLogin.ps1').Content)) -ArgumentList ($args + @('%1')))"
+
+;Remove Non Actionable AAG messages
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogErrorlogRemoveAGG]
+@="Remove DbMgrPartnerCommitPolicy* Entries"
+"Icon"="\"C:\\Windows\\System32\\imageres.dll\",162"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogErrorlogRemoveAGG\command]
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlQuicklog/master/Scripts/SQLQuickLogErrorlogRemoveAGG.ps1').Content)) -ArgumentList ($args + @('%1')))"
+
+;Remove Entries based on Clipboard entry
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogRemoveBasedClipboard]
+@="Remove Entries based on Clipboard"
+"Icon"="\"C:\\Windows\\System32\\shell32.dll\",260"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogRemoveBasedClipboard\command]
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlQuicklog/master/Scripts/SQLQuickLogRemoveBasedClipboard.ps1').Content)) -ArgumentList ($args + @('%1')))"
+
+;Filter based on Clipboard entry
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogFilterBasedClipboard]
+@="Filter (Keep Entries) based on Clipboard"
+"Icon"="\"C:\\Windows\\System32\\shell32.dll\",68"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogFilterBasedClipboard\command]
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlQuicklog/master/Scripts/SQLQuickLogFilterBasedClipboard.ps1').Content)) -ArgumentList ($args + @('%1')))"
+
+
+;Split to Multiple Files around 500K each
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogSplitFile]
+@="Split to Multiple Files around 60000 lines each"
+"Icon"="\"C:\\Windows\\System32\\shell32.dll\",250"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogSplitFile\command]
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlQuicklog/master/Scripts/SQLQuickLogSplitFile.ps1').Content)) -ArgumentList ($args + @('%1')))"
+
+;Change Encoding
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogChangeEncoding]
+@="Keep all Entries and Change to UTF-8 Encoding to Reduce Size"
+"Icon"="\"C:\\Windows\\System32\\shell32.dll\",69"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogChangeEncoding\command]
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlQuicklog/master/Scripts/SQLQuickLogChangeEncoding.ps1').Content)) -ArgumentList ($args + @('%1')))"
+
+
+;Check for updates
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogCheckUpdates]
+@="Update Sql Errorlog Helper"
+"Icon"="\"C:\\Windows\\System32\\shell32.dll\",238"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogCheckUpdates\command]
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlQuicklog/master/Scripts/SQLQuickLogCheckUpdates.ps1').Content)) -ArgumentList ($args + @('%1')))"

@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+;V 1.1 - for any issues contact rafidl@microsoft.com
+;Uninstall 
+
+[-HKEY_CLASSES_ROOT\*\shell\SQLQuickLog]
+
+
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogErrorlogRemoveLoginBackupAGG]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogErrorlogRemoveBackup]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogErrorlogRemoveLogin]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogErrorlogRemoveAGG]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogRemoveBasedClipboard]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogFilterBasedClipboard]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogSplitFile]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogChangeEncoding]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SQLQuickLogCheckUpdates]
