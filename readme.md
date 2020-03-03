@@ -7,7 +7,7 @@ There is no special installation required, just simple reg update and it will ad
 to **install** the menu run this command
 
 ```shell script
-powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlquicklog/master/setup.reg' -OutFile $env:temp\setup.reg"
+powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlquicklog/master/installation/setup.reg' -OutFile $env:temp\setup.reg"
 regedit.exe /s "%temp%\setup.reg"
 ```
 
@@ -23,6 +23,6 @@ There is no modification happening to any file, processed file will be added as 
 to **uninstall** run this command
 
 ```shell script
-powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlquicklog/master/uninstall.reg' -OutFile $env:temp\uninstall.reg"
+powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlquicklog/master/installation/uninstall.reg' -OutFile $env:temp\uninstall.reg"
 regedit.exe /s "%temp%\uninstall.reg"
 ```
