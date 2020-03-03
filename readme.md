@@ -7,22 +7,22 @@ There is no special installation required, just simple reg update and it will ad
 to **install** the menu run this command
 
 ```shell script
-powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/SQLQuickLog/master/setup.reg' -OutFile $env:temp\setup.reg"
+powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlquicklog/master/setup.reg' -OutFile $env:temp\setup.reg"
 regedit.exe /s "%temp%\setup.reg"
 ```
 
 just right click any errorlog file and you should see this menu
 
-  ![Image description](https://github.com/rl-msft/SQLQuickLog/blob/master/menu.JPG)
+  ![Image description](https://github.com/rl-msft/sqlquicklog/blob/master/menu.JPG)
 
 There is no modification happening to any file, processed file will be added as new file with the same as the original file with action name taking against it, for example below errorlog.1 was processed to remove logins entries 
 
-  ![Image description](https://github.com/rl-msft/SQLQuickLog/blob/master/fileout.JPG)
+  ![Image description](https://github.com/rl-msft/sqlquicklog/blob/master/fileout.JPG)
   
 
 to **uninstall** run this command
 
 ```shell script
-powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/SQLQuickLog/master/uninstall.reg' -OutFile $env:temp\uninstall.reg"
+powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlquicklog/master/uninstall.reg' -OutFile $env:temp\uninstall.reg"
 regedit.exe /s "%temp%\uninstall.reg"
 ```
