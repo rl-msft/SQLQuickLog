@@ -6,7 +6,7 @@ this is implemented as windows explorer context menu for easy access, it will he
 
 There is no special installation required, just simple reg update to build the menu and map its subcommands to remote powershell scripts hosted on github, this setup allows update to those scripts if needed and can reflect quickly without any user action.
 
-to install run this command from windows command prompt or powershell console
+to install run this command from **windows command prompt CMD**
 
 ```shell script
 powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlquicklog/master/installation/setup.reg' -OutFile $env:temp\setup.reg"
@@ -28,7 +28,7 @@ For now, I opted out from adding any progress bar to the PowerShell scripts to r
 
 **Uninstall**
 
-to install run this command from windows command prompt or powershell console
+to install run this command from **windows command prompt CMD**
 
 ```shell script
 powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlquicklog/master/installation/uninstall.reg' -OutFile $env:temp\uninstall.reg"
