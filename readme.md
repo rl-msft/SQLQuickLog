@@ -22,6 +22,9 @@ when you select any option, there is no modification happening to any the select
 
   ![Image description](https://github.com/rl-msft/sqlquicklog/blob/master/images/fileout.JPG)
   
+For now, I opted out from adding any progress bar to the PowerShell scripts to reduce extra CPU cycles, For now, after you select any option in the meanu you should notice PowerShell icon appears in the taskbar, once the icon disappear this is your indicate that processing has completed and you can open the processed file.
+  
+    ![Image description](https://github.com/rl-msft/sqlquicklog/blob/master/images/taskbar.JPG)
 
 **Uninstall**
 
