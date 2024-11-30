@@ -1,10 +1,10 @@
-# SQL QuickLog windows context menu for filtering large SQL errorlog files
+# SQL QuickLog Windows Context Menu for filtering Large SQL errorlog Files
 
-this is implemented as windows explorer context menu for easy access, it will help to deal with large SQL errorlog files by allowing quick filters to remove nonactionable entries that you might see in SQL errorlog, original files are NOT modified, the menu will create new files after applying the required filters, also the new files are encoded as UTF-8 which should help to reduce file size by approximately 50%. the new files should allow you to focus on what is matter when investigating those log files.
+This functionality is integrated into the Windows Explorer context menu for convenient access. It aids in managing large SQL error log files by enabling quick filtering to eliminate non-actionable entries typically found in SQL error logs. The original files remain unaltered, as the menu generates new files with the applied filters. These new files are encoded in UTF-8, which helps reduce their size by approximately 50%. This should enable you to concentrate on the pertinent details when examining those log files.
 
-**Installation**
+# Installation
 
-There is no special installation required, just simple reg update to build the menu and map its subcommands to remote powershell scripts hosted on github, this setup allows update to those scripts if needed and can reflect quickly without any user action.
+No special installation is needed; its a small registry update to create the menu and link its subcommands to remote PowerShell scripts hosted on GitHub. This setup allows the scripts to be updated as necessary and changes will be reflected immediately without any user intervention.
 
 to install run this command from **windows command prompt CMD**
 
@@ -18,7 +18,7 @@ after running the above command, when you right click any log file you should se
 
   ![Image description](https://github.com/rl-msft/SQLQuickLog/blob/master/images/SQLquickLogmenu.jpg)
 
-when you select any option, there is no modification happening to any the selected file, processed file will be added as new file named as the original file with action performed against it, for example hte below errorlog.1 was processed to remove logins entries, notice the new file new created.
+When you choose any option, the selected file remains unchanged. A new file will be created, named after the original file with the action performed on it. For instance, in the example below, 'errorlog.1' was processed to remove login entries, resulting in the creation of a new file.
 
   ![Image description](https://github.com/rl-msft/sqlquicklog/blob/master/images/fileout.JPG)
   
@@ -26,7 +26,7 @@ For now, I opted out from adding any progress bar to the PowerShell scripts to r
   
   ![Image description](https://github.com/rl-msft/SQLQuickLog/blob/master/images/taskbar.JPG)
 
-**Uninstall**
+# Uninstall
 
 to install run this command from **windows command prompt CMD**
 
